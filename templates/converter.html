@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forex Converter</title>
+</head>
+<body>
+    <h1>Forex Converter</h1>
+    <form method="post">
+        <label for="amount">Amount:</label>
+        <input type="text" name="amount" required><br>
+
+        <label for="source_currency">Source Currency:</label>
+        <input type="text" name="source_currency" required><br>
+
+        <label for="target_currency">Target Currency:</label>
+        <input type="text" name="target_currency" required><br>
+
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if converted %}
+    <h2>Conversion Result:</h2>
+    <p>{{ amount }} {{ source_currency }} is approximately {{ converted_amount }} {{ target_currency }}.</p>
+    {% endif %}
+</body>
+</html>
